@@ -3,26 +3,26 @@ name: Rust
 on: [push]
 
 jobs:
-  build-win:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Build on windows
-        run: cargo build
+#   build-win:
+#     runs-on: windows-latest
+#     steps:
+#       - uses: actions/checkout@v1
+#       - name: Build on windows
+#         run: cargo build
         
-  build-ubuntu:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Build on ubuntu
-        run: |
-          sudo apt-get install libudev-dev libasound2-dev
-          cargo build
+#   build-ubuntu:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v1
+#       - name: Build on ubuntu
+#         run: |
+#           sudo apt-get install libudev-dev libasound2-dev
+#           cargo build
           
   build-macOS:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v1
       - name: Build on macOS
-        run: curl https://sh.rustup.rs -sSf | sh && cargo build
+        run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     
