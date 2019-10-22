@@ -24,5 +24,5 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Build on macOS
-        run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -y
+        run: brew install rustup && rustup-init
     
