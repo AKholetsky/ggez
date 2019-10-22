@@ -11,5 +11,5 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build
       run: |
-        sudo apt-get install libudev-dev
+        sudo apt-get install libudev-dev libasound2-dev
         cargo build
