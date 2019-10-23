@@ -3,21 +3,21 @@ name: Rust
 on: [push]
 
 jobs:
-#   build-win:
-#     runs-on: windows-latest
-#     steps:
-#       - uses: actions/checkout@v1
-#       - name: Build on windows
-#         run: cargo build
+  build-win:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build on windows
+        run: cargo build
         
-#   build-ubuntu:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v1
-#       - name: Build on ubuntu
-#         run: |
-#           sudo apt-get install libudev-dev libasound2-dev
-#           cargo build
+  build-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build on ubuntu
+        run: |
+          sudo apt-get install libudev-dev libasound2-dev
+          cargo build
           
   build-macOS:
     runs-on: macOS-latest
